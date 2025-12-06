@@ -683,7 +683,7 @@ resource "azurerm_network_manager_connectivity_configuration" "connconf" {
 }
 
 resource "azurerm_network_manager_security_admin_configuration" "secconf" {
-  name               = "admin-conf1"
+  name               = "security-conf1"
   network_manager_id = azurerm_network_manager.network_manager_instance.id
 }
 
@@ -715,7 +715,7 @@ resource "azurerm_network_manager_admin_rule" "rule1" {
 }
 
 resource "azurerm_network_manager_routing_configuration" "routeconf" {
-  name               = "routing-configuration1"
+  name               = "routing-config1"
   network_manager_id = azurerm_network_manager.network_manager_instance.id
 }
 
@@ -808,3 +808,4 @@ resource "azapi_resource" "intent1" {
   schema_validation_enabled = true
   type                      = "Microsoft.Network/networkManagers/verifierWorkspaces/reachabilityAnalysisIntents@2024-07-01"
 }
+
