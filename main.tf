@@ -668,7 +668,7 @@ resource "azurerm_network_manager_static_member" "member3" {
 }
 
 resource "azurerm_network_manager_connectivity_configuration" "connconf" {
-  name                  = "connectivity-conf1"
+  name                  = "connectivityconfig"
   network_manager_id    = azurerm_network_manager.network_manager_instance.id
   connectivity_topology = "HubAndSpoke"
   applies_to_group {
@@ -683,7 +683,7 @@ resource "azurerm_network_manager_connectivity_configuration" "connconf" {
 }
 
 resource "azurerm_network_manager_security_admin_configuration" "secconf" {
-  name               = "security-conf1"
+  name               = "securityconfig"
   network_manager_id = azurerm_network_manager.network_manager_instance.id
 }
 
@@ -715,7 +715,7 @@ resource "azurerm_network_manager_admin_rule" "rule1" {
 }
 
 resource "azurerm_network_manager_routing_configuration" "routeconf" {
-  name               = "routing-config1"
+  name               = "routingconfig"
   network_manager_id = azurerm_network_manager.network_manager_instance.id
 }
 
@@ -808,4 +808,5 @@ resource "azapi_resource" "intent1" {
   schema_validation_enabled = true
   type                      = "Microsoft.Network/networkManagers/verifierWorkspaces/reachabilityAnalysisIntents@2024-07-01"
 }
+
 
